@@ -3,12 +3,12 @@ CREATE DATABASE library;
 USE library;
 
 CREATE TABLE customers(
-customerID INT NOT NULL UNIQUE AUTO_INCREMENT,
-customerFN varchar(15) NOT NULL,
-customerSN varchar(15) NOT NULL,
+id INT NOT NULL UNIQUE AUTO_INCREMENT,
+fName varchar(15) NOT NULL,
+sName varchar(15) NOT NULL,
 address varchar(50) NOT NULL,
 postcode varchar(8) NOT NULL,
-PRIMARY KEY(customerID));
+PRIMARY KEY(id));
 
 CREATE TABLE books(
 bookID INT NOT NULL UNIQUE AUTO_INCREMENT,
@@ -32,6 +32,10 @@ borrowDate date NOT NULL,
 returnDate date NOT NULL,
 staffID INT NOT NULL,
 PRIMARY KEY(orderID),
-FOREIGN KEY(customerID) REFERENCES customers(customerID),
+FOREIGN KEY(customerID) REFERENCES customers(id),
 FOREIGN KEY(bookID) REFERENCES books(bookID),
 FOREIGN KEY(staffID) REFERENCES staff(staffID));
+
+INSERT INTO customers(fName, sName, address, postcode) VALUES("George","Smith","24 EastField Lane","SW1B 3TQ");
+
+SELECT * FROM customers;
