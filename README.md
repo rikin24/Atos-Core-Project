@@ -4,7 +4,7 @@ The aim of this project is to create a CRUD Application with a chosen domain - I
 
 I have also included screenshots of an ER and UML diagram that both visualise the model of this database. In addition, I have also included a .gitignore file and a risk assessment of the project.
 
-For the CRUD Application I have aimed to achieve 60% coverage in testing and managed to achieve 70.8%, making the project mostly robust and usable for end users.
+For the CRUD Application I have aimed to achieve 60% coverage in testing and managed to achieve 71.7%, making the project mostly robust and usable for end users.
 
 The project includes a runnable jar file at the root of the repository, allowing even non-technical users to utilise the application at ease.
 
